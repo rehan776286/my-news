@@ -43,8 +43,12 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug, page } = params;
 
+  // const res = await fetch(
+  //   `http://localhost:4000/api/category/${slug}?page=${page}&lang=en`
+  // );
+
   const res = await fetch(
-    ` https://test-news-backend-1.onrender.com/api/category/${slug}?page=${page}&lang=en`
+    `https://test-news-backend-1.onrender.com/api/category/${slug}?page=${page}&lang=en`
   );
 
   const data = await res.json();

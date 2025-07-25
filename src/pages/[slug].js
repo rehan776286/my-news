@@ -108,9 +108,11 @@ export default function RelatedArticles({
 export async function getStaticPaths() {
   try {
     // const res = await fetch("http://localhost:4000/api/allslug");
-    const res = await fetch(
-      " https://test-news-backend-1.onrender.com/api/allslug?lang=en"
-    );
+    // const res = await fetch(
+    //   "https://test-news-backend-1.onrender.com/api/allslug?lang=en"
+    // );
+
+    const res = await fetch("http://localhost:4000/api/allslug?lang=en");
 
     const slugs = await res.json();
 
@@ -139,6 +141,10 @@ export async function getStaticProps({ params }) {
     const res = await fetch(
       ` https://test-news-backend-1.onrender.com/api/article/${params.slug}?lang=en`
     );
+    //     const res = await fetch(
+    //   `http://localhost:4000/api/article/${params.slug}?lang=en`
+    // );
+
     const data = await res.json();
 
     if (!data.article) return { notFound: true };

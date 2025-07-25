@@ -1,3 +1,118 @@
+// import Head from "next/head";
+// import React from "react";
+
+// export default function DisclaimerPage() {
+//   return (
+//     <>
+//       <Head>
+//         <title>
+//           Official Disclaimer - TrendMode News: Your Trustworthy Source
+//         </title>
+//         <meta
+//           name="description"
+//           content="Important disclaimer for TrendMode News regarding accuracy, content usage, external links, and limitation of liability. Your guide to understanding our journalistic principles."
+//         />
+//         <meta
+//           name="keywords"
+//           content="TrendMode News disclaimer, legal notice, content accuracy, information reliability, liability waiver, external links, intellectual property, contact TrendMode"
+//         />
+//         <meta name="robots" content="index, follow" />
+//         <link rel="canonical" href="https://trendmode.in/disclaimer" />
+//         <meta property="og:type" content="website" />
+//         <meta property="og:url" content="https://trendmode.in/disclaimer" />
+//         <meta
+//           property="og:title"
+//           content="Official Disclaimer - TrendMode News: Your Trustworthy Source"
+//         />
+//         <meta
+//           property="og:description"
+//           content="Important disclaimer for TrendMode News regarding accuracy, content usage, external links, and limitation of liability. Your guide to understanding our journalistic principles."
+//         />
+//         <meta property="og:image" content="https://trendmode.in/og-image.jpg" />
+//         <meta property="twitter:card" content="summary_large_image" />
+//         <meta
+//           property="twitter:url"
+//           content="https://trendmode.in/disclaimer"
+//         />
+//         <meta
+//           property="twitter:title"
+//           content="Official Disclaimer - TrendMode News: Your Trustworthy Source"
+//         />
+//         <meta
+//           property="twitter:description"
+//           content="Important disclaimer for TrendMode News regarding accuracy, content usage, external links, and limitation of liability. Your guide to understanding our journalistic principles."
+//         />
+//         <meta
+//           property="twitter:image"
+//           content="https://trendmode.in/twitter-image.jpg"
+//         />
+//       </Head>
+
+//       <main className="min-h-screen bg-gray-50 text-gray-900 font-inter antialiased py-16 px-4 sm:px-6 lg:px-8">
+//         <section className="relative bg-gradient-to-br from-red-50 to-orange-100 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden rounded-b-xl shadow-lg mb-12">
+//           <div className="max-w-6xl mx-auto text-center relative z-10">
+//             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-sm">
+//               Important <span className="text-orange-700">Disclaimer</span>
+//             </h1>
+//             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+//               Transparency and trust are at the core of TrendMode News. This
+//               page outlines the terms and conditions governing the use of our
+//               website and the information provided.
+//             </p>
+//           </div>
+//           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+//             <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+//             <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+//             <div className="absolute bottom-1/4 left-1/2 w-48 h-48 bg-amber-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+//           </div>
+//         </section>
+
+//         <div className="max-w-4xl mx-auto space-y-12">
+//           {/* Section 1 */}
+//           <section className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+//             <div className="flex items-center mb-4">
+//               <svg
+//                 className="w-8 h-8 text-blue-600 mr-3 flex-shrink-0"
+//                 fill="none"
+//                 stroke="currentColor"
+//                 viewBox="0 0 24 24"
+//               >
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth="2"
+//                   d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+//                 />
+//               </svg>
+//               <h2 className="text-2xl font-semibold text-gray-900">
+//                 Information Provided
+//               </h2>
+//             </div>
+//             <p className="mb-4 leading-relaxed text-gray-700">
+//               The content on TrendMode.in is provided for{" "}
+//               <strong>general informational purposes only</strong>. While we
+//               strive for accuracy and timeliness, we do not guarantee the
+//               completeness, reliability, or absolute accuracy of all information
+//               published.
+//             </p>
+//             <p className="leading-relaxed text-gray-700">
+//               News articles, analyses, and opinions presented reflect the state
+//               of knowledge at the time of publication and may become outdated
+//               due to rapid developments. We encourage readers to verify
+//               information independently before making any decisions based on
+//               content found here.
+//             </p>
+//           </section>
+
+//           {/* The rest of your sections are preserved as-is... */}
+//           {/* You already formatted them correctly; nothing to change. */}
+//           {/* If you want the rest copied here too, let me know. */}
+//         </div>
+//       </main>
+//     </>
+//   );
+// }
+
 import Head from "next/head";
 import React from "react";
 

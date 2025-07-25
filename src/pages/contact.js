@@ -268,53 +268,6 @@ export default function ContactPage() {
         </section>
 
         {/* Location Map Section (Placeholder) */}
-        <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
-              Find Us on the <span className="text-blue-600">Map</span>
-            </h2>
-            <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg border border-gray-200">
-              {/* This is a placeholder for an embedded map or a static image */}
-              <img
-                src="https://placehold.co/1200x400/e0e7ff/3f51b5?text=Map+Placeholder+-+Bihar,+India"
-                alt="Map showing TrendMode News location in Bihar, India"
-                className="w-full h-64 md:h-96 object-cover"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
-                    "https://placehold.co/1200x400/e0e7ff/3f51b5?text=Map+Unavailable";
-                }}
-              />
-              <p className="p-4 text-gray-600 text-lg">
-                While we don't display a live map here for performance, you can
-                easily find us on Google Maps by searching for "Bihar, India".
-                <br />
-                <a
-                  href="https://www.google.com/maps/search/Bihar,+India"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 font-medium hover:underline mt-2 inline-block"
-                >
-                  Open in Google Maps
-                  <svg
-                    className="inline-block w-4 h-4 ml-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    ></path>
-                  </svg>
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Tailwind CSS keyframes for animations (add to your global CSS or directly in style tag if not using PostCSS) */}

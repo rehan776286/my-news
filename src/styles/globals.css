@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* :root {
+  --font-inter: "Inter", sans-serif;
+  --font-lora: "Lora", serif;
+} */
+/* body { */
+/* font-family: "Arial", sans-serif; */
+/* background-color: #f7f7f7;
+  color: #111;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+} */
+
+/* styles/globals.css */
+/* Hide scrollbars only on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Restore scrollbars on laptops/desktops (non-touch) */
+@media (min-width: 768px) {
+  .no-scrollbar-md::-webkit-scrollbar {
+    display: initial;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .no-scrollbar-md {
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+  }
 }

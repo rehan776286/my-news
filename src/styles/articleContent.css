@@ -1,0 +1,43 @@
+/* styles/articleContent.css */
+
+.article-content {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.7;
+  background-color: #fff;
+  color: #222;
+  font-family: "Georgia", serif;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #555;
+  font-style: italic;
+}

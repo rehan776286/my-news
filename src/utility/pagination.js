@@ -7,7 +7,7 @@ export const fetchCategoryArticles = async (
   lang,
   limit = 2
 ) => {
-  const url = ` https://test-news-backend-1.onrender.com/api/category/${slug}?page=${page}&lang=${lang}&limit=${limit}`;
+  const url = `https://test-news-backend-1.onrender.com/api/category/${slug}?page=${page}&lang=${lang}&limit=${limit}`;
 
   // const url = `http://localhost:4000/api/category/${slug}?page=${page}&limit=${limit}&lang=${lang}`;
   const res = await fetch(url);

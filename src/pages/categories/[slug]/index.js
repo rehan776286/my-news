@@ -21,7 +21,9 @@ export default function CategoryPage({ slug, initialArticles = [] }) {
 
   const fetchMore = async () => {
     try {
-      const res = await api.get(`/category/${slug}?page=${page}&limit=5`);
+      const res = await api.get(
+        `/category/${slug}?page=${page}&lang=en&limit=5`
+      );
       const data = res.data;
       const newArticles = data.articles || [];
 

@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>To provide and maintain our Website.</li>
                 <li>
-                  To improve, personalize, and expand our Website's content and
+                  To improve, personalize, and expand our Website`s content and
                   features.
                 </li>
                 <li>To understand and analyze how you use our Website.</li>

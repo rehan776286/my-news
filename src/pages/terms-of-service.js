@@ -152,10 +152,10 @@ export default function TermsPage() {
                   inflammatory, or otherwise objectionable.
                 </li>
                 <li>
-                  Engage in any conduct that restricts or inhibits anyone's use
+                  {`Engage in any conduct that restricts or inhibits anyone's use
                   or enjoyment of the Website, or which, as determined by us,
                   may harm TrendMode News or users of the Website or expose them
-                  to liability.
+                  to liability.`}
                 </li>
                 <li>
                   Submit comments or any other user-generated content that

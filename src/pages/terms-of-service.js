@@ -272,7 +272,7 @@ export default function TermsPage() {
               <p>
                 We reserve the right, at our sole discretion, to modify or
                 replace these Terms at any time. If a revision is material, we
-                will try to provide at least 30 days' notice prior to any new
+                will try to provide at least 30 days notice prior to any new
                 terms taking effect. What constitutes a material change will be
                 determined at our sole discretion. By continuing to access or
                 use our Website after those revisions become effective, you

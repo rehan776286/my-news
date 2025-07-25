@@ -308,30 +308,30 @@ export default function PrivacyPolicy() {
                 7. Third-Party Links
               </h2>
               <p>
-                Our Website may contain links to other websites that are not
+                {`Our Website may contain links to other websites that are not
                 operated by us. If you click on a third-party link, you will be
                 directed to that third party's site. We strongly advise you to
                 review the Privacy Policy of every site you visit. We have no
                 control over and assume no responsibility for the content,
                 privacy policies, or practices of any third-party sites or
-                services.
+                services.`}
               </p>
             </div>
 
             {/* Children's Privacy */}
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">
-                8. Children's Privacy
+                {`8. Children's Privacy`}
               </h2>
               <p>
-                Our Website is not intended for use by children under the age of
+                {`Our Website is not intended for use by children under the age of
                 13. We do not knowingly collect personally identifiable
                 information from anyone under the age of 13. If you are a parent
                 or guardian and you are aware that your child has provided us
                 with personal data, please contact us. If we become aware that
                 we have collected personal data from children without
                 verification of parental consent, we take steps to remove that
-                information from our servers.
+                information from our servers.`}
               </p>
             </div>
 
@@ -341,12 +341,12 @@ export default function PrivacyPolicy() {
                 9. Changes to This Privacy Policy
               </h2>
               <p>
-                We may update our Privacy Policy from time to time. We will
+                {`We may update our Privacy Policy from time to time. We will
                 notify you of any changes by posting the new Privacy Policy on
                 this page and updating the "Last updated" date at the top. You
                 are advised to review this Privacy Policy periodically for any
                 changes. Changes to this Privacy Policy are effective when they
-                are posted on this page.
+                are posted on this page.`}
               </p>
             </div>
 

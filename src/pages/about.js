@@ -484,7 +484,7 @@ export default function AboutPage() {
                   journalism and modern digital consumption, ensuring that
                   quality news is accessible to everyone. His commitment to
                   ethical reporting and technological innovation forms the
-                  bedrock of TrendMode's operations.
+                  bedrock of TrendMode operations.
                 </p>
               </div>
             </div>

@@ -60,9 +60,9 @@ export default function ContactPage() {
               Get In <span className="text-blue-700">Touch</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              We'd love to hear from you! Whether you have feedback, inquiries,
+              {`We'd love to hear from you! Whether you have feedback, inquiries,
               or are interested in media partnerships, our team is ready to
-              assist you.
+              assist you.`}
             </p>
             <div className="flex justify-center space-x-4">
               <Link

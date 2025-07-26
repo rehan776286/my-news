@@ -1,6 +1,5 @@
 import LanguageToggleButton from "./toggleBT";
 import Image from "next/image";
-import DarkModeToggle from "./Cmode";
 
 // import iconlogo from "../../public/iconlogo.png";
 const Header = () => {
@@ -21,7 +20,6 @@ const Header = () => {
           priority
         /> */}
         <div className="flex justify-center items-center gap-3">
-          <DarkModeToggle />
           <LanguageToggleButton />
         </div>
       </div>

@@ -13,35 +13,12 @@ const ArticleCard = ({ title, subTitle, name, date, slug, ogImage }) => {
         <span className="text-blue-900 font-bold pr-2">{name}</span>
       </p>
       <div className="w-full md:max-w-2xl h-48 md:h-72 rounded-lg overflow-hidden">
-        {/* <img
-          src={ogImage?.url || "/testimage.jpg"}
-          alt={ogImage?.alt || "News image"}
-          className="w-full h-full object-cover  rounded-lg  "
-        /> */}
-        {/* <Image
+        <Image
           src={ogImage?.url}
-          alt={title}
-          width={700} // Approximate width, adjust based on your design max-width
-          height={400} // Approximate height, adjust based on aspect ratio
-          priority={true} // This is likely your LCP image, load it eagerly
-          className="w-full h-full object-cover rounded-lg"
-        /> */}
-        {/* <Image
-          src={`${ogImage?.url}?w=700&h=400&c_fill&f_auto&q_auto`}
           alt={title}
           width={700}
           height={400}
           priority
-          placeholder="empty" // or "blur" with blurDataURL
-          className="w-full h-full object-cover rounded-lg"
-        /> */}
-        <Image
-          src={ogImage?.url || "/testimage.jpg"}
-          alt={title}
-          width={396} // or whatever max desktop size needed
-          height={223}
-          sizes="(max-width: 768px) 100vw, 396px" // <-- This is key
-          priority // for above-the-fold images
           className="w-full h-full object-cover rounded-lg"
         />
       </div>

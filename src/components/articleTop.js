@@ -66,21 +66,6 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
               />
             </div>
           </div>
-          {/* <div>
-            <img src="/shereIcon/whatsapp.svg" className="w-6" />
-          </div>{" "}
-          <div>
-            <img src="/shereIcon/facebook.svg" className="w-6" />
-          </div>{" "}
-          <div>
-            <img src="/shereIcon/x.svg" className="w-6" />
-          </div>{" "}
-          <div>
-            <img src="/shereIcon/instagram.svg" className="w-6" />
-          </div>
-          <div>
-            <img src="/shereIcon/telegram.svg" className="w-6" />
-          </div> */}
         </div>
       </div>
 
@@ -88,10 +73,9 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
         <Image
           src={ogImage?.url || "/testimage.jpg"}
           alt={title}
-          width={396} // or whatever max desktop size needed
-          height={223}
-          sizes="(max-width: 768px) 100vw, 396px" // <-- This is key
-          priority // for above-the-fold images
+          width={700}
+          height={400}
+          priority
           className="w-full h-full object-cover rounded-lg"
         />
       </div>

@@ -55,7 +55,7 @@ export default function HomePage({ initialData }) {
     <Layout>
       {allData.map((section) => (
         <div key={section.category} className="">
-          <div className="relative w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:border-blue-400 dark:hover:border-blue-600">
+          <div className="relative w-full max-w-2xl mx-auto bg-white border border-gray-200 dark:border-gray-700 group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:border-blue-400 dark:hover:border-blue-600">
             <div className="flex items-center justify-center relative z-10">
               <div className="flex-grow h-0.5 bg-gradient-to-r from-transparent to-blue-400 dark:to-blue-600 rounded-full mr-4 opacity-75 group-hover:to-blue-500 dark:group-hover:to-blue-700 transition-colors duration-300"></div>
 

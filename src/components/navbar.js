@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [router.asPath]); // Re-run when the route changes
 
   return (
-    <nav className="relative w-full border-t border-b border-gray-100 bg-white dark:bg-gray-600 font-semibold font-sans shadow-sm">
+    <nav className="relative w-full border-t border-b border-gray-100 bg-white font-semibold font-sans shadow-sm">
       {" "}
       {/* Added subtle shadow */}
       {/* Left Scroll Button */}

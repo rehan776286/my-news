@@ -11,12 +11,12 @@ const ArticleSubCard = ({
 }) => {
   // Add slug prop
   return (
-    <section className="w-full px-1 border-t border-b border-slate-100 bg-white dark:bg-gray-800 shadow py-1 mt-2">
+    <section className="w-full px-1 border-t border-b border-slate-100 bg-white  shadow py-1 mt-2">
       <div className="flex justify-between items-start gap-1">
         {" "}
         {/* Wrap with Link */}
         <div className="max-w-lg w-full px-1">
-          <h1 className="text-lg font-bold line-clamp-4 text-slate-950 dark:text-white py-1">
+          <h1 className="text-lg font-bold line-clamp-4 text-slate-950  py-1">
             {title}
           </h1>
           <p className="text-xs text-neutralText-light dark:text-gray-400">

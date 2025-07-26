@@ -1,5 +1,4 @@
 import LanguageToggleButton from "./toggleBT";
-import Image from "next/image";
 
 // import iconlogo from "../../public/iconlogo.png";
 const Header = () => {
@@ -19,6 +18,7 @@ const Header = () => {
           className="w-30 md:w-40 h-auto object-contain select-none pointer-events-none"
           priority
         /> */}
+
         <LanguageToggleButton />
       </div>
       {/* <Navbar /> */}

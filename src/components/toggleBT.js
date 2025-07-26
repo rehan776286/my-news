@@ -1,18 +1,26 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function LanguageToggleSmall() {
   const router = useRouter();
   const isHindi = router.asPath.startsWith("/hi");
 
   const toggleLanguage = () => {
-    const currentPath = router.asPath;
-    if (isHindi) {
-      router.push("/");
-    } else {
-      router.push(`/hi`);
-    }
+    localStorage.setItem("preferredLanguage", isHindi ? "en" : "hi");
+    router.push(isHindi ? "/" : "/hi");
   };
 
+  useEffect(() => {
+    const preferredLang = localStorage.getItem("preferredLanguage");
+    if (!preferredLang) return;
+
+    const currentIsHindi = router.asPath.startsWith("/hi");
+    if (preferredLang === "hi" && !currentIsHindi) {
+      router.replace("/hi");
+    } else if (preferredLang === "en" && currentIsHindi) {
+      router.replace("/");
+    }
+  }, []);
   return (
     <div className="flex items-center space-x-1">
       <span className={`text-xs ${!isHindi ? "text-white" : "text-blue-600"}`}>

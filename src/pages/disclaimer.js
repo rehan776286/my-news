@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import React from "react";
 
@@ -134,13 +133,17 @@ export default function DisclaimerPage() {
             <p className="mb-4 leading-relaxed text-gray-700">
               TrendMode News sources content from a variety of reputable
               national and international news agencies, including licensed
-              partners, and employs an internal editorial review process. Our
-              team is committed to unbiased reporting and factual verification.
+              partners, and employs an internal editorial review process...
             </p>
-            <p className="leading-relaxed text-gray-700">
-              While we adhere to high journalistic standards, the views and
-              opinions expressed in articles may not always reflect the official
-              stance of TrendMode News.
+
+            <p className="mb-4 leading-relaxed text-gray-700">
+              TrendMode News publishes news articles and images under a valid
+              content syndication license agreement with{" "}
+              <strong>IANS (Indo-Asian News Service)</strong>. All such licensed
+              content remains the <strong>intellectual property of IANS</strong>
+              , and any unauthorized reuse, reproduction, or distribution is
+              strictly prohibited. We do not alter core editorial content and
+              ensure appropriate attribution to IANS where applicable.
             </p>
           </section>
 

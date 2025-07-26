@@ -451,7 +451,7 @@ export default function AboutPage() {
         </section>
 
         {/* Meet the Founder Section */}
-        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        {/* <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
               Meet Our <span className="text-blue-600">Founder</span>
@@ -489,7 +489,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact and Legal Links Section */}
         <section className="bg-white py-14 px-4 sm:px-6 lg:px-8 shadow-inner-top">

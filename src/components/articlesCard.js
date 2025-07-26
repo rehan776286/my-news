@@ -4,7 +4,7 @@ import Image from "next/image"; // Import Image component
 
 const ArticleCard = ({ title, subTitle, name, date, slug, ogImage }) => {
   return (
-    <article className="w-full px-1 bg-white py-1">
+    <article className="w-full px-1  py-1  bg-white text-black dark:bg-zinc-900 dark:text-white">
       {/* Use Link for navigation */}
       <h1 className="text-xl px-1 font-bold text-black mb-2 font-serif line-clamp-3 leading-tight">
         {title || "rehan"}

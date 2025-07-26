@@ -196,8 +196,9 @@ const Layout = ({
             </aside>
           </div>
         </main>
-
-        <Footer></Footer>
+        <div className="min-h-[300px]">
+          <Footer />
+        </div>
       </div>
     </>
   );

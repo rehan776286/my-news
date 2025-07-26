@@ -26,7 +26,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 alt="Share on WhatsApp"
                 width={24}
                 height={24}
-                loading="lazy"
+                priority
               />
             </div>
             <div>
@@ -35,7 +35,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 alt="Share on Facebook"
                 width={24}
                 height={24}
-                loading="lazy"
+                priority
               />
             </div>
             <div>
@@ -44,7 +44,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 alt="Share on X (Twitter)"
                 width={24}
                 height={24}
-                loading="lazy"
+                property
               />
             </div>
             <div>
@@ -53,7 +53,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 alt="Share on Instagram"
                 width={24}
                 height={24}
-                loading="lazy"
+                priority
               />
             </div>
             <div>
@@ -62,7 +62,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 alt="Share on Telegram"
                 width={24}
                 height={24}
-                loading="lazy"
+                property
               />
             </div>
           </div>

@@ -108,11 +108,11 @@ export default function RelatedArticles({
 export async function getStaticPaths() {
   try {
     // const res = await fetch("http://localhost:4000/api/allslug");
-    // const res = await fetch(
-    //   "https://test-news-backend-1.onrender.com/api/allslug?lang=en"
-    // );
+    const res = await fetch(
+      "https://test-news-backend-1.onrender.com/api/allslug?lang=en"
+    );
 
-    const res = await fetch("http://localhost:4000/api/allslug?lang=en");
+    // const res = await fetch("http://localhost:4000/api/allslug?lang=en");
 
     const slugs = await res.json();
 
@@ -151,7 +151,6 @@ export async function getStaticProps({ params }) {
 
     // ✅ This line defines `article`
     const article = data.article;
-    console.log(article);
 
     return {
       props: { ...article },

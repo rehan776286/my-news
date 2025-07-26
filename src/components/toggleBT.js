@@ -20,6 +20,7 @@ export default function LanguageToggleSmall() {
       </span>
       <button
         onClick={toggleLanguage}
+        aria-label="Switch language to Hindi"
         className={`relative w-10 h-5 rounded-full transition-colors duration-300 ${
           isHindi ? "bg-blue-900" : "bg-gray-300"
         }`}

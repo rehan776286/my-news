@@ -33,11 +33,12 @@ const ArticleSubCard = ({
         </div>
         <div className="max-w-full md:w-80 w-60 h-26 md:h-32 py-2 rounded-lg relative">
           <Image
-            src={ogImage?.url}
+            src={ogImage?.url || "/testimage.jpg"}
             alt={title}
-            width={700}
-            height={400}
-            priority
+            width={396} // or whatever max desktop size needed
+            height={223}
+            sizes="(max-width: 768px) 100vw, 396px" // <-- This is key
+            priority // for above-the-fold images
             className="w-full h-full object-cover rounded-lg"
           />
         </div>

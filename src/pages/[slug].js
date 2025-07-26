@@ -1,12 +1,7 @@
 // pages/article/[slug].js (or wherever you're rendering it)
 import ArticleTop from "@/components/articleTop";
 import Layout from "@/components/Layout";
-import dynamic from "next/dynamic";
-
-const YtCard = dynamic(() => import("@/components/YtCard"), {
-  loading: () => <p>Loading...</p>, // Optional: fallback while loading
-  ssr: false, // Optional: if the component uses browser-only features
-});
+import YtCard from "@/components/YtCard";
 import SocialFollowCard from "@/components/follow&sub";
 import { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";

@@ -1,10 +1,6 @@
 import Head from "next/head";
 import Header from "../components/header";
-// import Navbar from "../components/navbar";
-const Navbar = dynamic(() => import("@/components/navbar"), {
-  ssr: false,
-  loading: () => <div>Loading...</div>,
-});
+import Navbar from "../components/navbar";
 import Footer from "./footer";
 
 // import Footer from "@/components/Footer"; // optional but good

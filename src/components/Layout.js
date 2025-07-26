@@ -157,7 +157,7 @@ const Layout = ({
         )}
       </Head>
       <div
-        className={`flex flex-col min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white font-sans`}
+        className={`flex flex-col min-h-screen bg-white  dark:bg-slate-900  font-sans`}
       >
         {/* Sticky Header */}
         <header className="sticky top-0 z-50 bg-white shadow-sm">

@@ -1,8 +1,8 @@
 import Image from "next/image";
 const ArticleTop = ({ title, ogImage, createdAt }) => {
   return (
-    <article className="w-full px-1 bg-white py-1">
-      <h1 className="text-xl px-1 font-bold text-black  mb-2 font-serif line-clamp-3 leading-tight">
+    <article className="w-full px-1  py-1  bg-white  dark:bg-zinc-900">
+      <h1 className="text-xl px-1 font-bold text-black dark:text-white  mb-2 font-serif line-clamp-3 leading-tight">
         {title}
       </h1>
 

@@ -1,4 +1,6 @@
 import LanguageToggleButton from "./toggleBT";
+import Image from "next/image";
+import DarkModeToggle from "./Cmode";
 
 // import iconlogo from "../../public/iconlogo.png";
 const Header = () => {
@@ -18,8 +20,10 @@ const Header = () => {
           className="w-30 md:w-40 h-auto object-contain select-none pointer-events-none"
           priority
         /> */}
-
-        <LanguageToggleButton />
+        <div className="flex justify-center items-center gap-3">
+          <DarkModeToggle />
+          <LanguageToggleButton />
+        </div>
       </div>
       {/* <Navbar /> */}
     </header>

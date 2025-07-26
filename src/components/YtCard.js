@@ -2,7 +2,7 @@ import Image from "next/image"; // ✅ make sure this is correct
 
 const YtCard = ({ title, createdAt, ogImage }) => {
   return (
-    <article className="w-full px-1 py-1 bg-white text-black dark:bg-zinc-900 dark:text-white">
+    <article className="w-full px-1 py-1 bg-white  dark:bg-zinc-900 ">
       <div className="w-full md:h-30 h-48 rounded-lg overflow-hidden">
         <Image
           src={ogImage?.url || "/testimage.jpg"}
@@ -13,7 +13,7 @@ const YtCard = ({ title, createdAt, ogImage }) => {
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
-      <h1 className="text-lg px-1 font-bold text-black mt-2 mb-2 font-sans line-clamp-3 leading-tight">
+      <h1 className="text-lg px-1 font-bold text-black dark:text-white mt-2 mb-2 font-sans line-clamp-3 leading-tight">
         {title}
       </h1>
       <p className="text-sm px-1 text-neutral-600 dark:text-gray-400 mb-2">

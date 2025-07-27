@@ -63,6 +63,7 @@ export default function RelatedArticles({
           htmlContent={htmlContent}
           summary={summary}
           ogImage={ogImage}
+          slug={slug}
         />
 
         <div

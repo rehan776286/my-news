@@ -3,7 +3,7 @@ import timeAgo from "@/utility/dataFormet";
 
 const YtCard = ({ title, createdAt, ogImage, category, isHindi }) => {
   return (
-    <article className="w-full px-1 py-1 bg-white  ">
+    <article className="w-full px-1 py-1 bg-white border shadow-2xs  ">
       <div className="w-full md:h-30 h-48 rounded-lg overflow-hidden">
         <Image
           src={ogImage?.url || "/testimage.jpg"}

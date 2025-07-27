@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 export default function ShareIcons({ slug, title }) {
   const router = useRouter();
-  const currentLang = router.asPath.startsWith("/hi") ? "hi" : "en";
+  const currentLang = router.asPath.startsWith("/hi") ? "hi" : "";
   const url = `https://trendmode.in/${currentLang}/${slug}`;
   const encodedURL = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);

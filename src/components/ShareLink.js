@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function ShareIcons({ slug, title }) {
   const router = useRouter();
   const currentLang = router.asPath.startsWith("/hi") ? "hi" : ""; // no "en"
-  const url = `https://trendmode.in/${
+  const url = `https://my-news-vc6n.vercel.app/${
     currentLang ? `${currentLang}/` : ""
   }${slug}`;
 

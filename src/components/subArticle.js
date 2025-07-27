@@ -1,5 +1,6 @@
 // src/components/ArticleSubCard.js
 import Image from "next/image"; // Import Image component
+import timeAgo from "@/utility/dataFormet";
 
 const ArticleSubCard = ({
   title,
@@ -8,8 +9,12 @@ const ArticleSubCard = ({
   name,
   slug,
   ogImage,
+  isHindi,
 }) => {
   // Add slug prop
+  console.log(createdAt);
+  // console.log(category);
+
   return (
     <section className="w-full px-1 border-t border-b border-slate-100 bg-white  shadow py-1 mt-2">
       <div className="flex justify-between items-start gap-1">
@@ -21,14 +26,11 @@ const ArticleSubCard = ({
           </h1>
           <p className="text-xs text-neutralText-light dark:text-gray-400">
             <span className="text-xs font-bold text-blue-900 md:pr-2 pr-1">
-              {name || "rehan"}
+              {category.name || "rehan"}
             </span>
-            {/* <time dateTime={new Date(createdAt).toISOString()} className="ml-1">
-              {" "}
-              {/* Use ISO string for dateTime */}
-            {/* {new Date(createdAt).toLocaleDateString()}{" "} */}
-            {/* Format date for display */}
-            {/* </time> */}
+            <time dateTime={new Date(createdAt).toISOString()}>
+              {timeAgo(createdAt, isHindi ? "hi" : "en")}
+            </time>
           </p>
         </div>
         <div className="max-w-full md:w-80 w-60 h-26 md:h-32 py-2 rounded-lg relative">

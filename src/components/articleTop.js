@@ -1,5 +1,6 @@
 import Image from "next/image";
-const ArticleTop = ({ title, ogImage, createdAt }) => {
+import ShareIcons from "./ShareLink";
+const ArticleTop = ({ title, ogImage, createdAt, slug }) => {
   return (
     <article className="w-full px-1  py-1  bg-white  ">
       <h1 className="text-xl px-1 font-bold text-black   mb-2 font-serif line-clamp-3 leading-tight">
@@ -19,8 +20,9 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
       <div className="flex justify-between items-center px-1">
         <span>Read Time 2 min</span>
         <div className="flex  space-x-3 py-3 px-2">
-          <div className="flex gap-2">
-            <div>
+          <ShareIcons slug={slug} title={title} />
+          {/* <div className="flex gap-2"> */}
+          {/* <div>
               <Image
                 src="/shereIcon/whatsapp.svg"
                 alt="Share on WhatsApp"
@@ -65,7 +67,7 @@ const ArticleTop = ({ title, ogImage, createdAt }) => {
                 property
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

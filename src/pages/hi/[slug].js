@@ -79,7 +79,7 @@ export default function RelatedArticles({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 shadow-2xl">
           {uniqueArticles.map((article) => (
             <Link href={`/hi/${article.slug}`} key={article._id}>
-              <YtCard {...article} />
+              <YtCard {...article} isHindi="hi" />
             </Link>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import Image from "next/image"; // ✅ make sure this is correct
+import timeAgo from "@/utility/dataFormet";
 
-const YtCard = ({ title, createdAt, ogImage }) => {
+const YtCard = ({ title, createdAt, ogImage, category, isHindi }) => {
   return (
     <article className="w-full px-1 py-1 bg-white  ">
       <div className="w-full md:h-30 h-48 rounded-lg overflow-hidden">
@@ -17,8 +18,10 @@ const YtCard = ({ title, createdAt, ogImage }) => {
         {title}
       </h1>
       <p className="text-sm px-1 text-neutral-600 dark:text-gray-400 mb-2">
-        <span className="text-blue-900 font-bold pr-2">Politics</span>
-        <span>{createdAt}</span>
+        <span className="text-blue-900 font-bold pr-2">{category.name}</span>
+        <time dateTime={new Date(createdAt).toISOString()}>
+          {timeAgo(createdAt, isHindi ? "hi" : "en")}
+        </time>
       </p>
     </article>
   );

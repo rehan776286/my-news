@@ -76,6 +76,7 @@ export default function HomePage({ initialData }) {
                 <ArticleSubCard {...article} />
               </Link>
             ))}
+            {console.log(section.articles[0])}
           </div>
 
           <div className="w-full flex justify-center items-center mt-4">

@@ -7,9 +7,6 @@ import Head from "next/head";
 export default function CategoryPage({ articles, slug, page }) {
   return (
     <>
-      <h1 className="text-2xl font-bold">
-        {slug} News - Page {page}
-      </h1>
       <ArticleCard {...articles[0]} />
       <div className="space-y-6">
         {articles.map((article) => (

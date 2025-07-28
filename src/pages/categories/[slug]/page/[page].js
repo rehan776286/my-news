@@ -2,8 +2,11 @@
 import ArticleCard from "@/components/articlesCard";
 import ArticleSubCard from "@/components/subArticle";
 import Link from "next/link";
+import Header from "@/components/header";
 
 import Head from "next/head";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function CategoryPage({ articles, slug, page }) {
   const capitalizedSlug = slug.charAt(0).toUpperCase() + slug.slice(1);
@@ -15,7 +18,7 @@ export default function CategoryPage({ articles, slug, page }) {
         <title>{`${capitalizedSlug} News - Page ${page} | TrendMode`}</title>
         <meta
           name="description"
-          content={`Page ${page} of latest ${capitalizedSlug} news, breaking headlines, and in-depth coverage at TrendMode.`}
+          content={`Read Page ${page} of the latest ${capitalizedSlug} news, breaking headlines, and exclusive coverage from TrendMode.`}
         />
         <link rel="canonical" href={pageUrl} />
 
@@ -39,12 +42,16 @@ export default function CategoryPage({ articles, slug, page }) {
                   name: capitalizedSlug,
                   item: `https://trendmode.in/categories/${slug}`,
                 },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: `Page ${page}`,
-                  item: pageUrl,
-                },
+                ...(page > 1
+                  ? [
+                      {
+                        "@type": "ListItem",
+                        position: 3,
+                        name: `Page ${page}`,
+                        item: pageUrl,
+                      },
+                    ]
+                  : []),
               ],
             }),
           }}
@@ -63,11 +70,12 @@ export default function CategoryPage({ articles, slug, page }) {
                 "@type": "CollectionPage",
                 name: `${capitalizedSlug} News`,
               },
+              inLanguage: "en",
             }),
           }}
         />
 
-        {/* ItemList Structured Data for Article List */}
+        {/* ItemList Structured Data for List of Articles */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -77,7 +85,7 @@ export default function CategoryPage({ articles, slug, page }) {
               itemListElement: articles.map((article, index) => ({
                 "@type": "ListItem",
                 position: index + 1,
-                url: `https://trendmode.in/${article.slug}`, // English slug
+                url: `https://trendmode.in/${article.slug}`,
               })),
             }),
           }}
@@ -86,17 +94,17 @@ export default function CategoryPage({ articles, slug, page }) {
 
       {/* Page Content Below */}
       {/* Render your articles here */}
-      <h1 className="text-2xl font-bold">
-        {slug} News - Page {page}
-      </h1>
+      <Header />
+      <Navbar />
       <ArticleCard {...articles[0]} />
       <div className="space-y-6">
         {articles.map((article) => (
           <Link href={`/${article.slug}`} key={article._id}>
-            <ArticleSubCard {...article} />
+            <ArticleSubCard {...article} isHindi={"hi"} />
           </Link>
         ))}
       </div>
+      <Footer />
     </>
   );
 }

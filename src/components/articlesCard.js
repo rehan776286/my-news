@@ -1,29 +1,41 @@
-// src/components/ArticleCard.js
 import timeAgo from "@/utility/dataFormet";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
 
 const ArticleCard = ({ title, createdAt, ogImage, category, isHindi }) => {
+  const isValidDate = createdAt && !isNaN(new Date(createdAt).getTime());
+
   return (
-    <article className="w-full px-1  py-2  bg-white  ">
-      {/* Use Link for navigation */}
-      <h1 className="text-xl px-1 font-bold text-black py-1  mb-2 font-serif line-clamp-3 leading-tight">
-        {title || "rehan"}
+    <article className="w-full px-1 py-2 bg-white">
+      <h1 className="text-xl px-1 font-bold text-black py-1 mb-2 font-serif line-clamp-3 leading-tight">
+        {title || "Untitled"}
       </h1>
       <p className="text-sm px-1 text-neutral-600 dark:text-gray-400 mb-2">
-        <span className="text-blue-900 font-bold pr-2">{category.name}</span>
-        <time dateTime={new Date(createdAt).toISOString()}>
-          {timeAgo(createdAt, isHindi ? "hi" : "en")}
-        </time>
+        <span className="text-blue-900 font-bold pr-2">
+          {category?.name || "General"}
+        </span>
+        {isValidDate ? (
+          <time dateTime={new Date(createdAt).toISOString()}>
+            {timeAgo(createdAt, isHindi ? "hi" : "en")}
+          </time>
+        ) : (
+          <span>Unknown date</span>
+        )}
       </p>
       <div className="w-full md:max-w-2xl h-48 md:h-72 rounded-lg overflow-hidden">
-        <Image
-          src={ogImage?.url}
-          alt={title}
-          width={700}
-          height={400}
-          priority
-          className="w-full h-full object-cover rounded-lg"
-        />
+        {ogImage?.url ? (
+          <Image
+            src={ogImage.url}
+            alt={title || "News Image"}
+            width={700}
+            height={400}
+            priority
+            className="w-full h-full object-cover rounded-lg"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
+            No Image Available
+          </div>
+        )}
       </div>
     </article>
   );

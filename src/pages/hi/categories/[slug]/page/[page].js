@@ -5,7 +5,6 @@ import Link from "next/link";
 import Head from "next/head";
 import Header from "@/components/header";
 
-import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 

@@ -100,7 +100,7 @@ export default function CategoryPage({ articles, slug, page }) {
       <div className="space-y-6">
         {articles.map((article) => (
           <Link href={`/${article.slug}`} key={article._id}>
-            <ArticleSubCard {...article} isHindi={"hi"} />
+            <ArticleSubCard {...article} />
           </Link>
         ))}
       </div>

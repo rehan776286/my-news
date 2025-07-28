@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trendmode.in/sitemap.xml
+Sitemap: https://trendmode.in/news-sitemap.xml

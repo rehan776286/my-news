@@ -15,7 +15,7 @@ export const mainNewsCategoriesEN = [
 
 export const mainNewsCategoriesHI = [
   { name: "भारत", slug: "bharat", language: "hi" },
-  { name: "विश्व", slug: "vishwa", language: "hi" },
+  { name: "विश्व", slug: "vishva", language: "hi" },
   { name: "राजनीति", slug: "raajniti", language: "hi" },
   { name: "व्यापार", slug: "vyapar", language: "hi" },
   { name: "प्रौद्योगिकी", slug: "technology", language: "hi" },

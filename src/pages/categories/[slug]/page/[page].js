@@ -2,11 +2,90 @@
 import ArticleCard from "@/components/articlesCard";
 import ArticleSubCard from "@/components/subArticle";
 import Link from "next/link";
+
 import Head from "next/head";
 
 export default function CategoryPage({ articles, slug, page }) {
+  const capitalizedSlug = slug.charAt(0).toUpperCase() + slug.slice(1);
+  const pageUrl = `https://trendmode.in/categories/${slug}/page/${page}`;
+
   return (
     <>
+      <Head>
+        <title>{`${capitalizedSlug} News - Page ${page} | TrendMode`}</title>
+        <meta
+          name="description"
+          content={`Page ${page} of latest ${capitalizedSlug} news, breaking headlines, and in-depth coverage at TrendMode.`}
+        />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Breadcrumb Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://trendmode.in",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: capitalizedSlug,
+                  item: `https://trendmode.in/categories/${slug}`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: `Page ${page}`,
+                  item: pageUrl,
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* WebPage Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: `${capitalizedSlug} News - Page ${page}`,
+              url: pageUrl,
+              isPartOf: {
+                "@type": "CollectionPage",
+                name: `${capitalizedSlug} News`,
+              },
+            }),
+          }}
+        />
+
+        {/* ItemList Structured Data for Article List */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: articles.map((article, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: `https://trendmode.in/${article.slug}`, // English slug
+              })),
+            }),
+          }}
+        />
+      </Head>
+
+      {/* Page Content Below */}
+      {/* Render your articles here */}
       <h1 className="text-2xl font-bold">
         {slug} News - Page {page}
       </h1>
@@ -21,6 +100,129 @@ export default function CategoryPage({ articles, slug, page }) {
     </>
   );
 }
+
+// export default function CategoryPage({ articles, slug, page }) {
+//   return (
+//     <>
+
+//       <Head>
+//         <title>{`${
+//           slug.charAt(0).toUpperCase() + slug.slice(1)
+//         } News - Page ${page} | TrendMode`}</title>
+//         <meta
+//           name="description"
+//           content={`Explore page ${page} of the latest ${slug} news on TrendMode. Stay informed with top headlines, breaking updates, and in-depth analysis.`}
+//         />
+//         <link
+//           rel="canonical"
+//           href={`https://trendmode.in/categories/${slug}/page/${page}`}
+//         />
+
+//         {/* Open Graph Tags for Facebook */}
+//         <meta property="og:type" content="website" />
+//         <meta
+//           property="og:title"
+//           content={`${slug} News - Page ${page} | TrendMode`}
+//         />
+//         <meta
+//           property="og:description"
+//           content={`Top ${slug} news, headlines and updates on page ${page}.`}
+//         />
+//         <meta
+//           property="og:url"
+//           content={`https://trendmode.in/categories/${slug}/page/${page}`}
+//         />
+//         <meta property="og:site_name" content="TrendMode" />
+//         <meta
+//           property="og:image"
+//           content="https://trendmode.in/default-og-image.jpg"
+//         />
+
+//         {/* Twitter Card Meta */}
+//         <meta name="twitter:card" content="summary_large_image" />
+//         <meta
+//           name="twitter:title"
+//           content={`${slug} News - Page ${page} | TrendMode`}
+//         />
+//         <meta
+//           name="twitter:description"
+//           content={`Top ${slug} news and updates from page ${page}.`}
+//         />
+//         <meta
+//           name="twitter:image"
+//           content="https://trendmode.in/default-og-image.jpg"
+//         />
+
+//         {/* Robots tag for indexing (optional) */}
+//         <meta name="robots" content="index, follow" />
+
+//         {/* Breadcrumb Structured Data */}
+//         <script
+//           type="application/ld+json"
+//           dangerouslySetInnerHTML={{
+//             __html: JSON.stringify({
+//               "@context": "https://schema.org",
+//               "@type": "BreadcrumbList",
+//               itemListElement: [
+//                 {
+//                   "@type": "ListItem",
+//                   position: 1,
+//                   name: "Home",
+//                   item: "https://trendmode.in/",
+//                 },
+//                 {
+//                   "@type": "ListItem",
+//                   position: 2,
+//                   name: slug.charAt(0).toUpperCase() + slug.slice(1),
+//                   item: `https://trendmode.in/categories/${slug}`,
+//                 },
+//                 {
+//                   "@type": "ListItem",
+//                   position: 3,
+//                   name: `Page ${page}`,
+//                   item: `https://trendmode.in/categories/${slug}/page/${page}`,
+//                 },
+//               ],
+//             }),
+//           }}
+//         />
+
+//         {/* Pagination Structured Data */}
+//         <script
+//           type="application/ld+json"
+//           dangerouslySetInnerHTML={{
+//             __html: JSON.stringify({
+//               "@context": "https://schema.org",
+//               "@type": "WebPage",
+//               name: `${
+//                 slug.charAt(0).toUpperCase() + slug.slice(1)
+//               } News - Page ${page}`,
+//               url: `https://trendmode.in/categories/${slug}/page/${page}`,
+//               isPartOf: {
+//                 "@type": "CollectionPage",
+//                 name: `${slug.charAt(0).toUpperCase() + slug.slice(1)} News`,
+//               },
+//               breadcrumb: {
+//                 "@id": `https://trendmode.in/categories/${slug}/page/${page}#breadcrumb`,
+//               },
+//             }),
+//           }}
+//         />
+//       </Head>
+//       <h1 className="text-2xl font-bold">
+//         {slug} News - Page {page}
+//       </h1>
+//       <ArticleCard {...articles[0]} />
+//       <div className="space-y-6">
+//         {articles.map((article) => (
+//           <Link href={`/${article.slug}`} key={article._id}>
+//             <ArticleSubCard {...article} />
+//           </Link>
+//         ))}
+//       </div>
+//     </>
+//   );
+// }
 
 export async function getStaticPaths() {
   const slugs = ["world", "politics", "sports"]; // Or fetch from DB

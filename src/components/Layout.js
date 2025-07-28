@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/header";
 import Navbar from "../components/navbar";
 import Footer from "./footer";
+import { useRouter } from "next/router";
 
 // import Footer from "@/components/Footer"; // optional but good
 // components/Layout.js
@@ -20,6 +21,11 @@ const Layout = ({
   keywords = [], // e.g. ["India", "Budget", "Nirmala Sitharaman"]
   breadcrumbs = [], // e.g. [{ name: "Home", url: "/" }, { name: "Business", url: "/category/business" }]
 }) => {
+  const router = useRouter();
+
+  const isHindi = router.asPath.startsWith("/hi");
+  const langCode = isHindi ? "hi" : "en";
+
   const siteUrl = "https://trendmode.in";
   const fullUrl = `${siteUrl}/${slug}`;
   const defaultOgImage = `${siteUrl}/default-og-image.jpg`;
@@ -52,7 +58,7 @@ const Layout = ({
       dateModified: updatedTime || createdAt,
       author: {
         "@type": "Organization",
-        name: authorName,
+        name: "TrendMode Desk",
       },
       publisher: {
         "@type": "Organization",
@@ -104,6 +110,7 @@ const Layout = ({
         <meta name="description" content={description} />
         <link rel="canonical" href={fullUrl} />
         <meta name="robots" content="index, follow" />
+        <meta httpEquiv="content-language" content={langCode} />
 
         {/* Open Graph */}
         <meta property="og:title" content={title} />
@@ -112,7 +119,7 @@ const Layout = ({
         <meta property="og:url" content={fullUrl} />
         <meta property="og:image" content={ogImage || defaultOgImage} />
         <meta property="og:site_name" content="TrendMode" />
-        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale" content={isHindi ? "hi_IN" : "en_IN"} />
         {isArticle && createdAt && (
           <meta property="article:published_time" content={createdAt} />
         )}

@@ -59,7 +59,7 @@ export default function CategoryPage({ slug, initialArticles = [] }) {
 
   return (
     <Layout>
-      {articles.length > 0 && <ArticleCard {...articles[0]} />}
+      {articles.length > 0 && <ArticleCard {...articles[0]} isHindi={"hi"} />}
       <div className="space-y-4 mt-6">
         {articles.slice(1).map((article) => (
           <Link href={`/hi/${article.slug}`} key={article._id}>

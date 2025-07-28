@@ -1,16 +1,19 @@
 // src/components/ArticleCard.js
-
+import timeAgo from "@/utility/dataFormet";
 import Image from "next/image"; // Import Image component
 
-const ArticleCard = ({ title, subTitle, name, date, slug, ogImage }) => {
+const ArticleCard = ({ title, createdAt, ogImage, category, isHindi }) => {
   return (
-    <article className="w-full px-1  py-1  bg-white  ">
+    <article className="w-full px-1  py-2  bg-white  ">
       {/* Use Link for navigation */}
-      <h1 className="text-xl px-1 font-bold text-black  mb-2 font-serif line-clamp-3 leading-tight">
+      <h1 className="text-xl px-1 font-bold text-black py-1  mb-2 font-serif line-clamp-3 leading-tight">
         {title || "rehan"}
       </h1>
       <p className="text-sm px-1 text-neutral-600 dark:text-gray-400 mb-2">
-        <span className="text-blue-900 font-bold pr-2">{name}</span>
+        <span className="text-blue-900 font-bold pr-2">{category.name}</span>
+        <time dateTime={new Date(createdAt).toISOString()}>
+          {timeAgo(createdAt, isHindi ? "hi" : "en")}
+        </time>
       </p>
       <div className="w-full md:max-w-2xl h-48 md:h-72 rounded-lg overflow-hidden">
         <Image

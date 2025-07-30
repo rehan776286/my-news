@@ -6,14 +6,14 @@ export default function ContactPage() {
     <>
       {/* Head component for SEO and metadata */}
       <Head>
-        <title>Contact Us - TrendMode News: Get In Touch</title>
+        <title>संपर्क करें - TrendMode News: संपर्क में रहें</title>
         <meta
           name="description"
-          content="Contact TrendMode News for inquiries, feedback, media partnerships, or support. Reach out via email or visit our office in Bihar, India."
+          content="प्रश्नों, प्रतिक्रिया, मीडिया साझेदारी या सहायता के लिए TrendMode News से संपर्क करें। ईमेल के माध्यम से संपर्क करें या बिहार, भारत में हमारे कार्यालय पर आएं।"
         />
         <meta
           name="keywords"
-          content="TrendMode contact, news contact, media inquiries, feedback, support, Bihar India, TrendMode email"
+          content="TrendMode संपर्क, समाचार संपर्क, मीडिया पूछताछ, प्रतिक्रिया, समर्थन, बिहार भारत, TrendMode ईमेल"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://trendmode.in/contact" />
@@ -22,64 +22,60 @@ export default function ContactPage() {
         <meta property="og:url" content="https://trendmode.in/contact" />
         <meta
           property="og:title"
-          content="Contact Us - TrendMode News: Get In Touch"
+          content="संपर्क करें - TrendMode News: संपर्क में रहें"
         />
         <meta
           property="og:description"
-          content="Contact TrendMode News for inquiries, feedback, media partnerships, or support. Reach out via email or visit our office in Bihar, India."
+          content="प्रश्नों, प्रतिक्रिया, मीडिया साझेदारी या सहायता के लिए TrendMode News से संपर्क करें। ईमेल के माध्यम से संपर्क करें या बिहार, भारत में हमारे कार्यालय पर आएं।"
         />
         <meta
           property="og:image"
           content="https://trendmode.in/og-image-contact.jpg"
-        />{" "}
-        {/* Replace with your actual OG image */}
+        />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://trendmode.in/contact" />
         <meta
           property="twitter:title"
-          content="Contact Us - TrendMode News: Get In Touch"
+          content="संपर्क करें - TrendMode News: संपर्क में रहें"
         />
         <meta
           property="twitter:description"
-          content="Contact TrendMode News for inquiries, feedback, media partnerships, or support. Reach out via email or visit our office in Bihar, India."
+          content="प्रश्नों, प्रतिक्रिया, मीडिया साझेदारी या सहायता के लिए TrendMode News से संपर्क करें। ईमेल के माध्यम से संपर्क करें या बिहार, भारत में हमारे कार्यालय पर आएं।"
         />
         <meta
           property="twitter:image"
           content="https://trendmode.in/twitter-image-contact.jpg"
-        />{" "}
-        {/* Replace with your actual Twitter image */}
+        />
       </Head>
 
-      {/* Main content area with responsive padding and background */}
       <main className="min-h-screen bg-gray-50 text-gray-900 font-inter antialiased">
-        {/* Hero Section: Eye-catching introduction */}
         <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden rounded-b-xl shadow-lg">
           <div className="max-w-6xl mx-auto text-center relative z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-sm">
-              Get In <span className="text-blue-700">Touch</span>
+              संपर्क <span className="text-blue-700">करें</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              {`We'd love to hear from you! Whether you have feedback, inquiries,
-              or are interested in media partnerships, our team is ready to
-              assist you.`}
+              {`हम आपसे सुनना पसंद करेंगे! चाहे आपके पास कोई प्रतिक्रिया हो,
+              पूछताछ हो या मीडिया साझेदारी में रुचि हो, हमारी टीम आपकी सहायता
+              के लिए तैयार है।`}
             </p>
             <div className="flex justify-center space-x-4">
               <Link
                 href="#contact-form"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
               >
-                Send a Message
+                संदेश भेजें
               </Link>
               <Link
                 href="#contact-info"
                 className="inline-flex items-center px-6 py-3  border-2 border-blue-600 text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
               >
-                Our Details
+                हमारे विवरण
               </Link>
             </div>
           </div>
-          {/* Decorative background elements */}
+
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
             <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -87,17 +83,15 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Information Section */}
         <section
           id="contact-info"
           className="bg-white py-16 px-4 sm:px-6 lg:px-8 shadow-inner"
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
-              Our <span className="text-blue-600">Contact Details</span>
+              हमारे <span className="text-blue-600">संपर्क विवरण</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-              {/* Email */}
               <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
                 <svg
                   className="w-12 h-12 text-blue-600 mb-4"
@@ -114,10 +108,10 @@ export default function ContactPage() {
                   ></path>
                 </svg>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Email Us
+                  हमें ईमेल करें
                 </h3>
                 <p className="text-gray-700">
-                  For general inquiries and support.
+                  सामान्य पूछताछ और सहायता के लिए।
                 </p>
                 <Link
                   href="mailto:info@trendmode.in"
@@ -127,7 +121,6 @@ export default function ContactPage() {
                 </Link>
               </div>
 
-              {/* Location */}
               <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
                 <svg
                   className="w-12 h-12 text-blue-600 mb-4"
@@ -150,13 +143,12 @@ export default function ContactPage() {
                   ></path>
                 </svg>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Our Location
+                  हमारा स्थान
                 </h3>
-                <p className="text-gray-700">Our main office is located in:</p>
-                <p className="text-gray-800 font-medium mt-2">India</p>
+                <p className="text-gray-700">हमारा मुख्य कार्यालय स्थित है:</p>
+                <p className="text-gray-800 font-medium mt-2">भारत</p>
               </div>
 
-              {/* Working Hours */}
               <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
                 <svg
                   className="w-12 h-12 text-blue-600 mb-4"
@@ -173,26 +165,27 @@ export default function ContactPage() {
                   ></path>
                 </svg>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Working Hours
+                  कार्य समय
                 </h3>
-                <p className="text-gray-700">We are available during:</p>
+                <p className="text-gray-700">हम उपलब्ध हैं:</p>
                 <p className="text-gray-800 font-medium mt-2">
-                  Monday to Saturday
+                  सोमवार से शनिवार
                 </p>
-                <p className="text-gray-800 font-medium">9 AM to 7 PM IST</p>
+                <p className="text-gray-800 font-medium">
+                  सुबह 9 बजे से शाम 7 बजे IST
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Form Section */}
         <section
           id="contact-form"
           className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8"
         >
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8">
-              Send Us a <span className="text-blue-600">Message</span>
+              हमें <span className="text-blue-600">संदेश भेजें</span>
             </h2>
             <form className="bg-white p-8 rounded-xl shadow-lg space-y-6">
               <div>
@@ -200,14 +193,14 @@ export default function ContactPage() {
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Your Name
+                  आपका नाम
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"
-                  placeholder="John Doe"
+                  placeholder="राम कुमार"
                 />
               </div>
               <div>
@@ -215,14 +208,14 @@ export default function ContactPage() {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Your Email
+                  आपकी ईमेल
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"
-                  placeholder="you@example.com"
+                  placeholder="aap@example.com"
                 />
               </div>
               <div>
@@ -230,14 +223,14 @@ export default function ContactPage() {
                   htmlFor="subject"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Subject
+                  विषय
                 </label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"
-                  placeholder="Inquiry about..."
+                  placeholder="पूछताछ के बारे में..."
                 />
               </div>
               <div>
@@ -245,14 +238,14 @@ export default function ContactPage() {
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Your Message
+                  आपका संदेश
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"
-                  placeholder="Type your message here..."
+                  placeholder="यहां अपना संदेश लिखें..."
                 ></textarea>
               </div>
               <div className="text-center">
@@ -260,14 +253,12 @@ export default function ContactPage() {
                   type="submit"
                   className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
                 >
-                  Send Message
+                  संदेश भेजें
                 </button>
               </div>
             </form>
           </div>
         </section>
-
-        {/* Location Map Section (Placeholder) */}
       </main>
     </>
   );

@@ -29,7 +29,7 @@ const ArticleSubCard = ({
               {category.name || "rehan"}
             </span>
             <time dateTime={new Date(createdAt).toISOString()}>
-              {timeAgo(createdAt, isHindi ? "hi" : "en")}
+              {timeAgo(createdAt, isHindi == "hi" ? "hi" : "en")}
             </time>
           </p>
         </div>

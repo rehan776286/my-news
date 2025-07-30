@@ -15,7 +15,7 @@ const ArticleCard = ({ title, createdAt, ogImage, category, isHindi }) => {
         </span>
         {isValidDate ? (
           <time dateTime={new Date(createdAt).toISOString()}>
-            {timeAgo(createdAt, isHindi ? "hi" : "en")}
+            {timeAgo(createdAt, isHindi == "hi" ? "hi" : "en")}
           </time>
         ) : (
           <span>Unknown date</span>

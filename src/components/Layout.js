@@ -3,7 +3,6 @@ import Header from "../components/header";
 import Navbar from "../components/navbar";
 import Footer from "./footer";
 import { useRouter } from "next/router";
-import HiFooter from "./hiFooter";
 
 // import Footer from "@/components/Footer"; // optional but good
 // components/Layout.js
@@ -205,7 +204,7 @@ const Layout = ({
           </div>
         </main>
         <div className="min-h-[300px]">
-          {isHindi ? <HiFooter /> : <Footer />}
+          <Footer />
         </div>
       </div>
     </>

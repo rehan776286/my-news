@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ShareIcons from "./ShareLink";
-const ArticleTop = ({ title, ogImage, createdAt, slug }) => {
+const ArticleTop = ({ title, ogImage, createdAt, slug, category }) => {
   return (
     <article className="w-full px-1  py-1  bg-white  ">
       <h1 className="text-xl px-1 font-bold text-black   mb-2 font-serif line-clamp-3 leading-tight">
@@ -12,7 +12,7 @@ const ArticleTop = ({ title, ogImage, createdAt, slug }) => {
         {/* <time dateTime={createdAt}>{createdAt}</time> */}
       </p>
       <p className="text-slate-600 px-1 font-samibold text-sm">
-        <span>Publish by sports desk</span>
+        <span>{`Publish by ${category.name} desk`}</span>
         <time dateTime={createdAt} className="px-1">
           {new Date(createdAt).toLocaleString("en-IN", {
             day: "2-digit",

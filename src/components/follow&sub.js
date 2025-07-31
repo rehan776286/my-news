@@ -53,7 +53,7 @@ const SocialFollowCard = () => {
 
   return (
     <div className="w-full max-w-1xl mx-auto  p-2  bg-gradient-to-br from-blue-50 to-indigo-100 rounded-b-2xl shadow-lg border-r border-l border-b  border-blue-200 font-inter">
-      <div className=" ">
+      <div className="">
         <p className="text-gray-600 text-lg md:text-xl">
           Follow us on social media and subscribe to our newsletter for the
           latest news and insights.
@@ -101,7 +101,7 @@ const SocialFollowCard = () => {
               className="flex items-center justify-center p-2 rounded-full bg-white text-gray-600 shadow-md hover:shadow-lg hover:text-blue-600 transform hover:scale-105 transition-all duration-300 ease-in-out group"
               aria-label={`Follow us on ${link.name}`}
             >
-              <link.icon className="w-7 h-7" />
+              <link.icon className="w-5 h-5" />
               <span className="sr-only">{link.name}</span>{" "}
               {/* Screen reader text */}
             </a>

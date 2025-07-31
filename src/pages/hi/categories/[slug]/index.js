@@ -1,6 +1,6 @@
 import ArticleSubCard from "@/components/subArticle";
 import api from "@/utility/api";
-import Layout from "@/components/Layout";
+import LayoutHi from "@/components/HiLayout";
 import Link from "next/link";
 import ArticleCard from "@/components/articlesCard";
 import { fetchCategoryArticles } from "@/utility/pagination";
@@ -58,8 +58,8 @@ export default function CategoryPage({ slug, initialArticles = [] }) {
   }, [loaderRef.current, hasNext]);
 
   return (
-    <Layout>
-      {articles.length > 0 && <ArticleCard {...articles[0]} />}
+    <LayoutHi>
+      {articles.length > 0 && <ArticleCard {...articles[0]} isHindi={"hi"} />}
       <div className="space-y-4 mt-6">
         {articles.slice(1).map((article) => (
           <Link href={`/hi/${article.slug}`} key={article._id}>
@@ -77,7 +77,7 @@ export default function CategoryPage({ slug, initialArticles = [] }) {
       {!hasNext && (
         <div className="text-center py-6 text-gray-400">No more articles.</div>
       )}
-    </Layout>
+    </LayoutHi>
   );
 }
 

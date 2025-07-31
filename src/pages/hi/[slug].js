@@ -1,5 +1,5 @@
 import ArticleTop from "@/components/articleTop";
-import Layout from "@/components/Layout";
+import LayoutHi from "@/components/HiLayout";
 import YtCard from "@/components/YtCard";
 import SocialFollowCard from "@/components/follow&sub";
 import { useEffect, useRef, useMemo } from "react";
@@ -55,7 +55,23 @@ export default function RelatedArticles({
   }, [data]);
 
   return (
-    <Layout>
+    <LayoutHi
+      pageType="article" // 'article' | 'homepage' | 'category'
+      title="Budget 2025: Nirmala Sitharaman Unveils Major Tax Reforms"
+      description="Finance Minister Nirmala Sitharaman announces significant tax reforms in Budget 2025. Get key highlights, expert analysis, and full coverage."
+      ogImage={ogImage} // full URL for best Open Graph SEO
+      slug="budget-2025-tax-reforms" // used for canonical and structured data
+      createdAt={createdAt} // ISO string
+      updatedTime={createdAt} // ISO string
+      authorName="TrendMode News"
+      articleSection="Business"
+      keywords={["India", "Budget 2025", "Nirmala Sitharaman", "Tax Reforms"]}
+      breadcrumbs={[
+        { name: "Home", url: "/" },
+        { name: "Business", url: "/category/business" },
+        { name: "Budget 2025", url: "/article/budget-2025-tax-reforms" },
+      ]}
+    >
       <section>
         <ArticleTop
           title={title}
@@ -101,7 +117,7 @@ export default function RelatedArticles({
           ) : null}
         </div>
       </section>
-    </Layout>
+    </LayoutHi>
   );
 }
 

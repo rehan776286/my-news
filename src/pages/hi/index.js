@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import ArticleCard from "@/components/articlesCard";
 import ArticleSubCard from "@/components/subArticle";
-import Layout from "@/components/Layout";
+import LayoutHi from "@/components/HiLayout";
 import api from "@/utility/api";
 
 export default function HomePage({ initialData }) {
@@ -52,7 +52,7 @@ export default function HomePage({ initialData }) {
   }, [fetchMoreCategories, hasMore]);
 
   return (
-    <Layout>
+    <LayoutHi>
       {allData.map((section) => (
         <div key={section.category} className="">
           <div className="relative w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:border-blue-400 dark:hover:border-blue-600">
@@ -111,7 +111,7 @@ export default function HomePage({ initialData }) {
       {!hasMore && (
         <p className="text-center p-4 text-gray-500">All categories loaded.</p>
       )}
-    </Layout>
+    </LayoutHi>
   );
 }
 
